@@ -1,0 +1,11 @@
+# In first migrations
+Add mig cmd : dotnet ef migrations add FirstMigration
+generate script cmd : dotnet ef migrations script  -o ./SqlScripts/0001FirstMigration.sql
+
+# In second migrations
+dotnet ef migrations add SecondMigration
+dotnet ef migrations script  'FirstMigration'  'SecondMigration' -o ./SqlScripts/0002SecondMigration.sql
+
+# In third migrations
+dotnet ef migrations add ThirdMigration
+dotnet ef migrations script 'SecondMigration' 'ThirdMigration' -o ./SqlScripts/0003ThirdMigration.sql
