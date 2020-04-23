@@ -9,7 +9,7 @@ using ScriptMigration.Models;
 
 namespace ScriptMigration.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
